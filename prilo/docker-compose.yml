@@ -9,6 +9,9 @@ services:
       - DATABASE_URL=postgresql://postgres:postgres@db:5432/mydatabase
     ports:
       - "8000:8000"
+    volumes:
+      - ./app:/app/app
+      - ./frontend:/app/frontend
 
   db:
     image: postgres:15
